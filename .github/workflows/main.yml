@@ -21,7 +21,7 @@ jobs:
         target: [win32, x64]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
@@ -47,3 +47,4 @@ jobs:
         file: build/bin/${{ matrix.build-type }}/usbdump-${{ matrix.build-type }}-${{ matrix.target }}.exe
         tag: ${{ github.ref }}
         file_glob: true
+
